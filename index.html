@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Med Stack 医学院青年技术团队筹备汇报：Hades V4.1、科学智能与校园数字化实践。">
+  <meta name="color-scheme" content="light">
+  <title>Med Stack · 医学院青年技术团队筹备汇报</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2316263c'/%3E%3Cpath d='M14 46V18h7l11 17 11-17h7v28h-8V32L32 47 22 32v14' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main id="viewport" aria-label="Med Stack 演示文稿">
+    <div id="frame"><div id="deck"></div></div>
+  </main>
+  <nav class="toolbar" aria-label="演示控制">
+    <button id="tocButton" aria-haspopup="dialog" title="目录（M）">目录 <span>M</span></button>
+    <div id="chapterName" class="chapter-name">开场</div>
+    <div class="page-nav"><button id="prev" aria-label="上一页">‹</button><output id="counter" aria-live="polite">01 / 20</output><button id="next" aria-label="下一页">›</button></div>
+    <div class="toolbar-right"><button id="notesButton" title="讲述提示（N）" aria-pressed="false">讲述提示</button><button id="fullButton" title="全屏（F）">全屏</button></div>
+    <div class="progress" role="progressbar" aria-label="演示进度" aria-valuemin="1" aria-valuemax="20"><span id="progressFill"></span></div>
+  </nav>
+  <aside id="notes" hidden aria-label="当前页讲述提示"><button id="closeNotes" aria-label="关闭讲述提示">×</button><b>讲述提示</b><p id="noteText"></p></aside>
+  <dialog id="toc"><div class="dialog-head"><div><small>MED STACK / CONTENTS</small><h2>汇报目录</h2></div><button data-close="toc" aria-label="关闭目录">×</button></div><div id="tocGrid"></div><p class="dialog-hint">方向键 / 空格切页 · 滚轮切页 · Home / End 首尾页 · F 全屏 · N 讲述提示 · Esc 关闭弹层</p></dialog>
+  <dialog id="sources"><div class="dialog-head"><div><small>REFERENCES & STATUS</small><h2>本页依据</h2></div><button data-close="sources" aria-label="关闭资料来源">×</button></div><div id="sourceBody"></div><p class="dialog-hint">正文与图表可离线阅读；打开外部原文需要联网。资料核对日期：2026-10-01。</p></dialog>
+  <div id="announcement" class="sr-only" role="status"></div>
+  <noscript>请在浏览器中启用 JavaScript 以播放此离线演示文稿。</noscript>
+</body>
+</html>
